@@ -5,15 +5,8 @@ import com.demo.android.cassiana.rickandmortycardapp.model.CharacterList
 
 class Repository {
     
-    suspend fun getCharacters(): CharacterList {
-        return RetrofitInstance.api.getCharacters()
+    suspend fun getCharacters(page: Int): CharacterList {
+        return RetrofitInstance.api.getCharacters(page)
     }
 
-    suspend fun getCharactersAlive(): CharacterList {
-        return RetrofitInstance.api.getCharactersAlive()
-    }
-
-    suspend fun getCharactersUnknow(): CharacterList {
-        return RetrofitInstance.api.getCharactersUnkown()
-    }
 }

@@ -17,14 +17,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/btn_filter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </SearchView>
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_filter"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"

@@ -1,5 +1,9 @@
 package com.demo.android.cassiana.rickandmortycardapp.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Character (
     var id : Int,
     var name: String,
@@ -10,4 +14,4 @@ data class Character (
     var location : LocationData,
     var image : String,
     var episode : List<String>
-)
+): Parcelable

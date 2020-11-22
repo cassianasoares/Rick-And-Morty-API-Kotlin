@@ -26,9 +26,13 @@ class CharacterAdpater: RecyclerView.Adapter<CharacterAdpater.CharacterViewHolde
         return listCharacters.size
     }
 
-    fun getCharacters(characters: List<Character>){
+    fun setCharacters(characters: List<Character>){
         listCharacters = characters
         notifyDataSetChanged()
+    }
+
+    fun getCharacters(): List<Character>{
+        return listCharacters
     }
 
     class CharacterViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
