@@ -7,6 +7,7 @@
     tools:context=".fragment.list.FilterFragment">
 
     <com.google.android.material.chip.ChipGroup
+        android:id="@+id/clipGroup_status"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -15,20 +16,85 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Alive"
-            android:textColor="@color/design_default_color_error" />
-
-        <com.google.android.material.chip.Chip
+            android:id="@+id/clip_dead"
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:checked="true"
+            android:checked="false"
             android:text="Dead"
+            android:textColor="@color/design_default_color_error" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/clip_alive"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:checked="false"
+            android:text="Alive"
+            android:textColor="@color/design_default_color_error" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/clip_unknown"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:checked="false"
+            android:text="unknown"
+            android:textColor="@color/design_default_color_error" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/clipGroup_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clipGroup_status">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/clip_male"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:checked="false"
+            android:text="Male"
+            android:textColor="@color/design_default_color_error" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/clip_female"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:checked="false"
+            android:text="Female"
+            android:textColor="@color/design_default_color_error" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/clip_genderless"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:checked="false"
+            android:text="Genderless"
+            android:textColor="@color/design_default_color_error" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/clip_gender_unknown"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:checked="false"
+            android:text="unknown"
             android:textColor="@color/design_default_color_error" />
 
     </com.google.android.material.chip.ChipGroup>

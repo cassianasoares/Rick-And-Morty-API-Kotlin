@@ -29,9 +29,14 @@ class ListViewModel: ViewModel() {
     }
 
 
-    fun orderBy(list: List<Character>){
-        val characters= list.filter{it.status == "unknown"}//episode.size in 3..6}
-        val sorted = characters.sortedBy { it.id }
+
+    fun orderByStatus(list: List<Character>, condition: MutableList<CharSequence>): List<Character>{
+        val characters = arrayListOf<Character>()
+        for(item in condition) {
+            Log.d("RecebidoView", item.toString())
+            characters.addAll(list.filter { it.status == item })//episode.size in 3..6}
+        }
+
 //        val listchar = arrayListOf<Character>()
         Log.d("Filter", characters.size.toString())
 //        for(item in characters){
@@ -39,7 +44,25 @@ class ListViewModel: ViewModel() {
 //                listchar.add(item)
 //            }
 //        }
-        filterCharacters.value = sorted
+        return characters.sortedBy { it.id }
+        //filterCharacters.value = sorted
+    }
+
+    fun orderByGender(list: List<Character>, condition: MutableList<CharSequence>): List<Character>{
+        val characters = arrayListOf<Character>()
+        for(item in condition) {
+            characters.addAll(list.filter { it.gender == item })//episode.size in 3..6}
+        }
+
+//        val listchar = arrayListOf<Character>()
+        Log.d("Filter", characters.size.toString())
+//        for(item in characters){
+//            if(item.status == "unknown" || item.status == "Dead"){
+//                listchar.add(item)
+//            }
+//        }
+        return characters.sortedBy { it.id }
+        //filterCharacters.value = sorted
     }
 
 }
