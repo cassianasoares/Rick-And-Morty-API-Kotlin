@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CostumChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textColor">@color/costum_chip_color</item>
+        <item name="chipStrokeColor">@color/costum_chip_color</item>
+        <item name="chipStrokeWidth">2dp</item>
+        <item name="chipCornerRadius">8dp</item>
+        <item name="chipBackgroundColor">@color/black_inicial</item>
+    </style>
+
+    <style name="CostumCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@android:color/transparent</item>
+        <item name="android:layout_marginStart">12dp</item>
+    </style>
+
+</resources>

@@ -18,34 +18,24 @@ class ListViewModel: ViewModel() {
     var filterCharacters = MutableLiveData<List<Character>>()
 
     fun getCharacters(status: Array<Int>) {
-        val characters: ArrayList<Character>? = ArrayList()
+        val characters: ArrayList<Character> = ArrayList()
         for (item in status){
             viewModelScope.launch{
                 val response = repository.getCharacters(item)
-                characters!!.addAll(response.results)
+                characters.addAll(response.results)
                 allCharacters.value = characters
             }
        }
     }
 
-
-
     fun orderByStatus(list: List<Character>, condition: MutableList<CharSequence>): List<Character>{
         val characters = arrayListOf<Character>()
         for(item in condition) {
-            Log.d("RecebidoView", item.toString())
-            characters.addAll(list.filter { it.status == item })//episode.size in 3..6}
+            //Log.d("RecebidoView", item.toString())
+            characters.addAll(list.filter { it.status == item })
         }
-
-//        val listchar = arrayListOf<Character>()
         Log.d("Filter", characters.size.toString())
-//        for(item in characters){
-//            if(item.status == "unknown" || item.status == "Dead"){
-//                listchar.add(item)
-//            }
-//        }
         return characters.sortedBy { it.id }
-        //filterCharacters.value = sorted
     }
 
     fun orderByGender(list: List<Character>, condition: MutableList<CharSequence>): List<Character>{
@@ -53,16 +43,8 @@ class ListViewModel: ViewModel() {
         for(item in condition) {
             characters.addAll(list.filter { it.gender == item })//episode.size in 3..6}
         }
-
-//        val listchar = arrayListOf<Character>()
         Log.d("Filter", characters.size.toString())
-//        for(item in characters){
-//            if(item.status == "unknown" || item.status == "Dead"){
-//                listchar.add(item)
-//            }
-//        }
         return characters.sortedBy { it.id }
-        //filterCharacters.value = sorted
     }
 
 }

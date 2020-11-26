@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_listFragment_to_filterFragment"
             app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
         android:id="@+id/filterFragment"
@@ -22,9 +25,6 @@
         <action
             android:id="@+id/action_filterFragment_to_listFragment"
             app:destination="@id/listFragment" />
-        <argument
-            android:name="characterList"
-            app:argType="com.demo.android.cassiana.rickandmortycardapp.model.Character[]" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -34,5 +34,14 @@
         <action
             android:id="@+id/action_splashFragment_to_listFragment"
             app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="character"
+            app:argType="com.demo.android.cassiana.rickandmortycardapp.model.Character" />
     </fragment>
 </navigation>
