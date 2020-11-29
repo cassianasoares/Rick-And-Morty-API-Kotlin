@@ -19,8 +19,8 @@
     </fragment>
     <fragment
         android:id="@+id/filterFragment"
-        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.list.FilterFragment"
-        android:label="fragment_filter"
+        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.filter.FilterFragment"
+        android:label="Filter"
         tools:layout="@layout/fragment_filter" >
         <action
             android:id="@+id/action_filterFragment_to_listFragment"
@@ -28,17 +28,18 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.SplashFragment"
-        android:label="fragment_splash"
+        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.splash.SplashFragment"
+        android:label=""
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_listFragment"
-            app:destination="@id/listFragment" />
+            app:destination="@id/listFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.DetailFragment"
-        android:label="fragment_detail"
+        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.details.DetailFragment"
+        android:label=""
         tools:layout="@layout/fragment_detail" >
         <argument
             android:name="character"

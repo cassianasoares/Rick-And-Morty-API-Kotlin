@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black_inicial"
-    tools:context=".fragment.list.FilterFragment">
+    tools:context=".fragment.filter.FilterFragment">
 
     <TextView
         android:id="@+id/textView2"
@@ -88,7 +88,7 @@
             style="@style/CostumChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" 1 "
+            android:text="1-2"
             android:textSize="24sp"
             android:textStyle="bold"/>
 
@@ -96,19 +96,19 @@
             style="@style/CostumChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2-3" />
+            android:text="3-4" />
 
         <com.google.android.material.chip.Chip
             style="@style/CostumChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4-9" />
+            android:text="5-7" />
 
         <com.google.android.material.chip.Chip
             style="@style/CostumChip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10+" />
+            android:text="10-41" />
 
     </com.google.android.material.chip.ChipGroup>
 
@@ -139,21 +139,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox_female"
             style="@style/CostumCheckBox"
             android:background="@drawable/checkbox_female_selector"
             android:text="Female" />
 
         <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox_genderless"
             style="@style/CostumCheckBox"
             android:background="@drawable/checkbox_genderless_selector"
             android:text="Genderless" />
 
         <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox_male"
             style="@style/CostumCheckBox"
             android:background="@drawable/checkbox_male_selector"
             android:text="Male" />
 
         <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkbox_unknown"
             style="@style/CostumCheckBox"
             android:background="@drawable/checkbox_unknown_selector"
             android:text="unknown" />

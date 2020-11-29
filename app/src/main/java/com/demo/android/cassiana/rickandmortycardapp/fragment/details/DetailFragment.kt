@@ -1,4 +1,4 @@
-package com.demo.android.cassiana.rickandmortycardapp.fragment
+package com.demo.android.cassiana.rickandmortycardapp.fragment.details
 
 
 
@@ -7,6 +7,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.demo.android.cassiana.rickandmortycardapp.R
+import com.demo.android.cassiana.rickandmortycardapp.fragment.details.DetailFragmentArgs
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.fragment_detail.txt_status

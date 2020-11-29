@@ -1,4 +1,4 @@
-package com.demo.android.cassiana.rickandmortycardapp.fragment.list
+package com.demo.android.cassiana.rickandmortycardapp.fragment.filter
 
 import android.os.Bundle
 import android.util.Log
@@ -8,57 +8,30 @@ import android.widget.CheckBox
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.demo.android.cassiana.rickandmortycardapp.R
+import com.demo.android.cassiana.rickandmortycardapp.fragment.SharedViewModel
 import com.demo.android.cassiana.rickandmortycardapp.model.Character
-import com.google.android.material.chip.Chip
+import com.demo.android.cassiana.rickandmortycardapp.util.Util
 import com.google.android.material.chip.ChipGroup
 import kotlinx.android.synthetic.main.fragment_filter.*
 
 
 class FilterFragment : Fragment(R.layout.fragment_filter) {
-    private val mainViewModel: ListViewModel by activityViewModels()
-    var teste = listOf<Character>()
-
+    private val viewModel: SharedViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val size_group = clipGroup_teste.checkedChipIds
-//
-//
-//
-//            one.setOnClickListener {
-//                one.setChecked(!one.isChecked)
-//                if(one.isChecked){
-//                    img_male.setImageResource(R.drawable.ic_chip_icon_teste)
-//                }else{
-//                    img_male.setImageResource(R.drawable.ic_chip_icon)
-//                }
-//            }
-//
-//        two.setOnClickListener {
-//            two.setChecked(!two.isChecked)
-//            if(two.isChecked){
-//                img_male_two.setImageResource(R.drawable.ic_chip_icon_teste)
-//            }else{
-//                img_male_two.setImageResource(R.drawable.ic_chip_icon)
-//            }
-//        }
+       val checkboxList = listOf<CheckBox>(checkbox_female,checkbox_genderless, checkbox_male, checkbox_unknown)
 
         btn_make_filter.setOnClickListener {
-            getSelect(mainViewModel.allCharacters.value!!)
-            //mainViewModel.orderBy(mainViewModel.allCharacters.value!!)
-            //Log.d("SizeGroup", size_group.size.toString())
+            val titles = Util.getAllTitles(clipGroup_status, clipGroup_n_episodes, checkboxList)
+            viewModel.setFilter(viewModel.allCharacters.value!!, titles)
 
             findNavController().navigate(R.id.action_filterFragment_to_listFragment)
         }
     }
 
-    fun getSelect(list: List<Character>) {
-//        clipGroup_status.forEach { child ->
-//            (child as? Chip)?.setOnCheckedChangeListener { _, _ ->
-//                Toast.makeText(context, "Selected Clip", Toast.LENGTH_LONG).show()
-//            }
-//        }
+//    fun getSelect(list: List<Character>) {
 //        val idsStatus = clipGroup_status//.checkedChipIds
 //        val idsGender = clipGroup_gender//.checkedChipIds
 //        val listCheckBox = listOf<CheckBox>()
@@ -101,6 +74,6 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
 //            mainViewModel.filterCharacters.value = sentensa
 //
 //       // mainViewModel.orderBy(list, listTitles)
-    }
+//    }
 
 }
