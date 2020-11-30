@@ -3,7 +3,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/cassianasoares/Rick-And-Morty-API-Kotlin?color=green)
 
 
-# RickAndMortyAPI
+# Rick and Morty API
 
 App to consume Rick And Morty API in kotlin with a costum filter.
 
