@@ -5,7 +5,7 @@
 
 # Rick and Morty API
 
-App to consume Rick And Morty API in kotlin with a costum filter.
+App to consume The Rick and Morty API in kotlin with a costum filter.
 
 
 <p align"center">
