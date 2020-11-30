@@ -9,7 +9,7 @@
         <item name="chipBackgroundColor">@color/black_inicial</item>
     </style>
 
-    <style name="CostumCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="CostumRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:button">@null</item>

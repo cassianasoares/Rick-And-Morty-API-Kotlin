@@ -1,180 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:background="@color/black_inicial"
-    tools:context=".fragment.filter.FilterFragment">
+    tools:context=".ui.fragment.filter.FilterFragment">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="Status"
+        android:padding="15dp"
+        android:text="@string/title_filter"
         android:textColor="@android:color/white"
+        android:textAlignment="center"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/clipGroup_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
-
-        <com.google.android.material.chip.Chip
-            style="@style/CostumChip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Alive"
-            android:textSize="14sp" />
-
-        <com.google.android.material.chip.Chip
-            style="@style/CostumChip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dead"
-            android:textSize="14sp" />
-
-        <com.google.android.material.chip.Chip
-            style="@style/CostumChip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="unknown"
-            android:textSize="14sp" />
-
-    </com.google.android.material.chip.ChipGroup>
-
-    <TextView
-        android:id="@+id/txt_title_episodes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="Episodes"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clipGroup_status" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/clipGroup_n_episodes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
-        app:singleSelection="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txt_title_episodes"
-        app:layout_constraintTop_toBottomOf="@+id/txt_title_episodes">
-
-        <com.google.android.material.chip.Chip
-            style="@style/CostumChip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1-2"
-            android:textSize="24sp"
-            android:textStyle="bold"/>
-
-        <com.google.android.material.chip.Chip
-            style="@style/CostumChip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3-4" />
-
-        <com.google.android.material.chip.Chip
-            style="@style/CostumChip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5-7" />
-
-        <com.google.android.material.chip.Chip
-            style="@style/CostumChip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10-41" />
-
-    </com.google.android.material.chip.ChipGroup>
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="Gender"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clipGroup_n_episodes" />
+        />
 
     <LinearLayout
-        android:id="@+id/layout_gender"
-        android:layout_width="330dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/txt_title_episodes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_status"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipgroup_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_alive"
+                style="@style/CostumChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_chip_alive"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CostumChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_chip_dead"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/CostumChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_chip_unknown"
+                android:textSize="14sp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_gender"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_gender"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/checkbox_female"
+                style="@style/CostumRadioButton"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/checkbox_female_selector"
+                android:text="@string/txt_checkbox_female" />
+
+            <RadioButton
+                android:id="@+id/checkbox_genderless"
+                style="@style/CostumRadioButton"
+                android:background="@drawable/checkbox_genderless_selector"
+                android:text="@string/txt_checkbox_genderless" />
+
+            <RadioButton
+                android:id="@+id/checkbox_male"
+                style="@style/CostumRadioButton"
+                android:background="@drawable/checkbox_male_selector"
+                android:text="@string/txt_checkbox_male" />
+
+            <RadioButton
+                android:id="@+id/checkbox_unknown"
+                style="@style/CostumRadioButton"
+                android:background="@drawable/checkbox_unknown_selector"
+                android:text="@string/txt_checkbox_unknown" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        android:layout_gravity="center">
 
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/checkbox_female"
-            style="@style/CostumCheckBox"
-            android:background="@drawable/checkbox_female_selector"
-            android:text="Female" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/black_gray"
+            android:text="@string/title_btn_reset"
+            app:cornerRadius="8dp"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null" />
 
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/checkbox_genderless"
-            style="@style/CostumCheckBox"
-            android:background="@drawable/checkbox_genderless_selector"
-            android:text="Genderless" />
-
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/checkbox_male"
-            style="@style/CostumCheckBox"
-            android:background="@drawable/checkbox_male_selector"
-            android:text="Male" />
-
-        <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/checkbox_unknown"
-            style="@style/CostumCheckBox"
-            android:background="@drawable/checkbox_unknown_selector"
-            android:text="unknown" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_make_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/background_button"
+            android:text="@string/title_btn_apply"
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
 
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_make_filter"
-        android:layout_width="205dp"
-        android:layout_height="50dp"
-        android:text="Apply"
-        android:textColor="@color/black"
-        app:backgroundTint="@null"
-        android:background="@drawable/background_button"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

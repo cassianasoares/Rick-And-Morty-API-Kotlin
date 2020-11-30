@@ -1,4 +1,4 @@
-package com.demo.android.cassiana.rickandmortycardapp.fragment.list
+package com.demo.android.cassiana.rickandmortycardapp.ui.fragment.list
 
 import android.view.LayoutInflater
 import android.view.View
@@ -49,12 +49,9 @@ class CharacterAdpater: RecyclerView.Adapter<CharacterAdpater.CharacterViewHolde
 
         fun bind(character: Character){
             Picasso.get().load(character.image).into(image_character)
-            status_type.text = character.status.first().toString()
+            status_type.text = character.status
             id_number.text = character.id.toString()
             name_character.text = character.name
-
-//            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
-//            view.findNavController().navigate(action)
         }
     }
 

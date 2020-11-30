@@ -1,4 +1,4 @@
-package com.demo.android.cassiana.rickandmortycardapp
+package com.demo.android.cassiana.rickandmortycardapp.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,22 +6,20 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.demo.android.cassiana.rickandmortycardapp.R
 
 class MainActivity : AppCompatActivity() {
 
     var navController: NavController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_RickAndMortyCardApp)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         navController = findNavController(R.id.navHostFragment)
 
-        val appBarConfiguration = AppBarConfiguration
-                .Builder(R.id.splashFragment, R.id.listFragment)
-                .build()
-
-        setupActionBarWithNavController(navController!!, appBarConfiguration)
+        setupActionBarWithNavController(navController!!)
     }
 
     override fun onSupportNavigateUp(): Boolean {

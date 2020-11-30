@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black_inicial"
-    tools:context=".fragment.details.DetailFragment">
+    tools:context=".ui.fragment.details.DetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
             android:id="@+id/txt_episodes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Episodes"
+            android:text="@string/title_episodes"
             android:textColor="@color/text_details_color"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/txt_origin"
@@ -60,7 +60,7 @@
             android:id="@+id/txt_n_episodes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="42"
+            tools:text="42"
             android:textColor="@color/text_details_color"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -74,7 +74,7 @@
             android:id="@+id/txt_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Genderless"
+            tools:text="Genderless"
             android:textColor="@color/text_details_color"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/painel_card"
@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Origin"
+            android:text="@string/title_origin"
             android:textColor="@color/text_details_color"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="Genetic experiment"
+            tools:text="Genetic experiment"
             android:textColor="@color/text_details_color"
             android:textStyle="bold"
             android:maxLines="1"
@@ -118,7 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Location"
+            android:text="@string/title_location"
             android:textColor="@color/text_details_color"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:text="Testicle Monster Dimension"
+            tools:text="Testicle Monster Dimension"
             android:textColor="@color/text_details_color"
             android:textStyle="bold"
             android:maxLines="1"
@@ -146,7 +146,7 @@
             android:id="@+id/txt_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unknown"
+            tools:text="Unknown"
             android:textColor="@color/text_details_color"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -161,7 +161,7 @@
             android:id="@+id/txt_id_character"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="7"
+            tools:text="7"
             android:textColor="@color/text_details_color"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -185,25 +185,29 @@
 
         <TextView
             android:id="@+id/txt_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Abradolf Lincler"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="center"
             android:textColor="@color/text_details_color"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textStyle="bold"
+            tools:text="Abradolf Lincler"
             app:layout_constraintBottom_toBottomOf="@+id/painel_card"
             app:layout_constraintEnd_toEndOf="@+id/painel_card"
             app:layout_constraintStart_toStartOf="@+id/painel_card"
             app:layout_constraintTop_toBottomOf="@+id/img_character"
-            app:layout_constraintVertical_bias="0.19" />
+            app:layout_constraintVertical_bias="0.19"
+             />
 
         <TextView
             android:id="@+id/txt_specie"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Human"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textAlignment="center"
             android:textColor="@color/text_details_color"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -211,7 +215,8 @@
             app:layout_constraintEnd_toEndOf="@+id/painel_card"
             app:layout_constraintStart_toStartOf="@+id/painel_card"
             app:layout_constraintTop_toBottomOf="@+id/txt_name"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Human" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

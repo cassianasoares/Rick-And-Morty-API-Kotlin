@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_app"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/listFragment">
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.list.ListFragment"
-        android:label="fragment_list"
+        android:name="com.demo.android.cassiana.rickandmortycardapp.ui.fragment.list.ListFragment"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_filterFragment"
@@ -17,28 +17,18 @@
             android:id="@+id/action_listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
     </fragment>
-    <fragment
+    <dialog
         android:id="@+id/filterFragment"
-        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.filter.FilterFragment"
-        android:label="Filter"
+        android:name="com.demo.android.cassiana.rickandmortycardapp.ui.fragment.filter.FilterFragment"
+        android:label=""
         tools:layout="@layout/fragment_filter" >
         <action
             android:id="@+id/action_filterFragment_to_listFragment"
             app:destination="@id/listFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.splash.SplashFragment"
-        android:label=""
-        tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_splashFragment_to_listFragment"
-            app:destination="@id/listFragment"
-            app:popUpToInclusive="false" />
-    </fragment>
+    </dialog>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.demo.android.cassiana.rickandmortycardapp.fragment.details.DetailFragment"
+        android:name="com.demo.android.cassiana.rickandmortycardapp.ui.fragment.details.DetailFragment"
         android:label=""
         tools:layout="@layout/fragment_detail" >
         <argument

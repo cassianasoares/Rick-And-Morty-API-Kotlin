@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black_inicial"
-    tools:context=".fragment.list.ListFragment">
+    tools:context=".ui.fragment.list.ListFragment">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:text="Characters"
+        android:text="@string/title_characters"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"

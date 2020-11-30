@@ -1,7 +1,28 @@
 <resources>
-    <string name="app_name">RickAndMortyCardApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- App Strings -->
+    <string name="app_name">RickAndMorty API</string>
+
+    <!-- ListFragment Strings -->
+    <string name="title_characters">Characters</string>
+
+    <!-- FilterFragment Strings -->
+    <string name="title_btn_reset">Reset</string>
+    <string name="title_btn_apply">Apply</string>
+    <string name="title_filter">Filter</string>
+    <string name="title_status">Status</string>
+    <string name="txt_chip_alive">Alive</string>
+    <string name="txt_chip_dead">Dead</string>
+    <string name="txt_chip_unknown">unknown</string>
+    <string name="title_gender">Gender</string>
+    <string name="txt_checkbox_female">Female</string>
+    <string name="txt_checkbox_genderless">Genderless</string>
+    <string name="txt_checkbox_male">Male</string>
+    <string name="txt_checkbox_unknown">unknown</string>
+
+    <!-- DetailFragment Strings -->
+    <string name="title_episodes">Episodes</string>
+    <string name="title_origin">Origin</string>
+    <string name="title_location">Location</string>
 
 
 
