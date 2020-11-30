@@ -1,3 +1,6 @@
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cassianasoares/Rick-And-Morty-API-Kotlin)
+![GitHub top language](https://img.shields.io/github/languages/top/cassianasoares/Rick-And-Morty-API-Kotlin?color=pink)
+![GitHub last commit](https://img.shields.io/github/last-commit/cassianasoares/Rick-And-Morty-API-Kotlin?color=green)
 
 
 # RickAndMortyAPI
@@ -6,9 +9,9 @@ App to consume Rick And Morty API in kotlin with a costum filter.
 
 
 <p align"center">
-<img src="arts/list_fragment.png" width="411" height="823" />
-<img src="arts/filter_fragment.png" width="411" height="823" />
-<img src="arts/details_fragment.png" width="411" height="823" />
+<img src="arts/list_fragment.png" width="311" height="623" />
+<img src="arts/filter_fragment.png" width="311" height="623"  />
+<img src="arts/details_fragment.png" width="311" height="623"  />
 </p>
 
 # System Requirements
