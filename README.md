@@ -9,9 +9,9 @@ App to consume Rick And Morty API in kotlin with a costum filter.
 
 
 <p align"center">
-<img src="arts/list_fragment.png" width="311" height="623" />
-<img src="arts/filter_fragment.png" width="311" height="623"  />
-<img src="arts/details_fragment.png" width="311" height="623"  />
+<img src="arts/list_fragment.png" width="211" height="423" />
+<img src="arts/filter_fragment.png" width="211" height="423"  />
+<img src="arts/details_fragment.png" width="211" height="423"  />
 </p>
 
 # System Requirements
