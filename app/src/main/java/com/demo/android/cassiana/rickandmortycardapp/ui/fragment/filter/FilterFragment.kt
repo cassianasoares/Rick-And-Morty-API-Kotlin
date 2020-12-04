@@ -42,8 +42,7 @@ class FilterFragment : BottomSheetDialogFragment() {
                     viewModel.getByGender(radiogroup_gender.getTextButtonChecked(), 1)
                 }
             }
-
-            findNavController().navigate(R.id.action_filterFragment_to_listFragment)
+            findNavController().popBackStack(R.id.listFragment, false)
         }
     }
 }

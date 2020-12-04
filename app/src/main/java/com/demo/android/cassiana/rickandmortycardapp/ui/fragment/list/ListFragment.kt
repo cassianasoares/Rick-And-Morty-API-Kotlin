@@ -1,5 +1,6 @@
 package com.demo.android.cassiana.rickandmortycardapp.ui.fragment.list
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -22,7 +23,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.getCharacters(1)
+
 
         viewModel.listCharactersInEpisode.observe(viewLifecycleOwner, {
             adapter.setCharacters(it)
@@ -50,6 +51,11 @@ class ListFragment : Fragment(R.layout.fragment_list) {
                 return true
             }
         })
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        viewModel.getCharacters(1)
     }
 
 }

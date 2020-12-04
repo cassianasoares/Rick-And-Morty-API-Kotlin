@@ -74,24 +74,24 @@
             android:id="@+id/txt_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Genderless"
             android:textColor="@color/text_details_color"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/painel_card"
             app:layout_constraintEnd_toEndOf="@+id/painel_card"
             app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="@+id/painel_card"
-            app:layout_constraintTop_toBottomOf="@+id/txt_specie"
-            app:layout_constraintVertical_bias="0.52" />
+            app:layout_constraintTop_toBottomOf="@+id/img_character"
+            app:layout_constraintVertical_bias="0.84000003"
+            tools:text="Genderless" />
 
         <TextView
             android:id="@+id/txt_titulo_origin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="28dp"
             android:text="@string/title_origin"
             android:textColor="@color/text_details_color"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/painel_location"
             app:layout_constraintHorizontal_bias="0.1"
@@ -104,14 +104,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            tools:text="Genetic experiment"
-            android:textColor="@color/text_details_color"
-            android:textStyle="bold"
             android:maxLines="1"
+            android:textColor="@color/text_details_color"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/painel_location"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="@+id/txt_titulo_origin"
-            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_origin" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_origin"
+            tools:text="Genetic experiment" />
 
         <TextView
             android:id="@+id/txt_titulo_location"
@@ -120,7 +120,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/title_location"
             android:textColor="@color/text_details_color"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/painel_location"
             app:layout_constraintHorizontal_bias="0.0"
@@ -133,14 +133,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            tools:text="Testicle Monster Dimension"
-            android:textColor="@color/text_details_color"
-            android:textStyle="bold"
             android:maxLines="1"
+            android:textColor="@color/text_details_color"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/painel_location"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="@+id/txt_titulo_location"
-            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_location" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_titulo_location"
+            tools:text="Testicle Monster Dimension" />
 
         <TextView
             android:id="@+id/txt_status"
@@ -189,17 +189,17 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
+            android:maxLines="2"
             android:textAlignment="center"
             android:textColor="@color/text_details_color"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            tools:text="Abradolf Lincler"
             app:layout_constraintBottom_toBottomOf="@+id/painel_card"
             app:layout_constraintEnd_toEndOf="@+id/painel_card"
             app:layout_constraintStart_toStartOf="@+id/painel_card"
             app:layout_constraintTop_toBottomOf="@+id/img_character"
             app:layout_constraintVertical_bias="0.19"
-             />
+            tools:text="Abradolf Lincler" />
 
         <TextView
             android:id="@+id/txt_specie"
