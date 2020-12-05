@@ -2,6 +2,7 @@ package com.demo.android.cassiana.rickandmortycardapp.ui.fragment.list
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.appcompat.widget.SearchView
@@ -23,8 +24,6 @@ class ListFragment : Fragment(R.layout.fragment_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
         viewModel.listCharactersInEpisode.observe(viewLifecycleOwner, {
             adapter.setCharacters(it)
         })
@@ -37,9 +36,23 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         }
 
         getNameSearchView()
+
+        viewModel.filterValue.observe(viewLifecycleOwner, {
+            if(it[0] > -1 || it[1] > -1){
+                Log.d("ViewrSize", it.size.toString())
+                txt_reset.visibility = View.VISIBLE
+            }else{
+                txt_reset.visibility = View.INVISIBLE
+            }
+        })
+
+        txt_reset.setOnClickListener {
+            viewModel.getCharacters(1)
+            viewModel.filterValue.value = arrayOf(-1,-1)
+        }
     }
 
-    fun getNameSearchView(){
+    private fun getNameSearchView(){
         searchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener {
 
             override fun onQueryTextSubmit(query: String?): Boolean {

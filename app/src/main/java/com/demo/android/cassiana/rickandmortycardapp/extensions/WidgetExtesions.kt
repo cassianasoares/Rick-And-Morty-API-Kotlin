@@ -10,17 +10,23 @@ fun ChipGroup.getTextChipChecked(): String{
     if(selectedId == -1){
         return " "
     }else{
-        val chip = findViewById<Chip>(selectedId).text.toString()
-        return chip
+        return findViewById<Chip>(selectedId).text.toString()
     }
 }
 
-fun RadioGroup.getTextButtonChecked(): String{
-    val selectedId: Int = this.checkedRadioButtonId
-    if(selectedId == -1){
-        return " "
-    }else{
-        val radioButton = findViewById<RadioButton>(selectedId).text.toString()
-        return radioButton
+    fun RadioGroup.getTextButtonChecked(): String {
+        val selectedId: Int = this.checkedRadioButtonId
+        if (selectedId == -1) {
+            return " "
+        } else {
+            return findViewById<RadioButton>(selectedId).text.toString()
+        }
     }
-}
+
+    fun RadioGroup.setButtonChecked(selectedId: Int) {
+        if (selectedId == -1) {
+            return
+        } else {
+            this.findViewById<RadioButton>(selectedId).isChecked = true
+        }
+    }

@@ -17,4 +17,12 @@
         <item name="android:layout_marginStart">12dp</item>
     </style>
 
+    <style name="BottomSheetTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/background_filter</item>
+    </style>
+
 </resources>

@@ -10,7 +10,11 @@ import kotlinx.coroutines.launch
 class SharedViewModel(private val repository: Repository): ViewModel() {
 
     var listCharactersInEpisode = MutableLiveData<List<Character>>()
-    var valueChipCheked = MutableLiveData<String>()
+    var filterValue = MutableLiveData<Array<Int>>()
+
+    init {
+        filterValue.value = arrayOf(-1, -1)
+    }
 
     fun getCharacters(page: Int) {
         viewModelScope.launch{
@@ -46,5 +50,6 @@ class SharedViewModel(private val repository: Repository): ViewModel() {
             listCharactersInEpisode.value = characters.results
         }
     }
+
 
 }

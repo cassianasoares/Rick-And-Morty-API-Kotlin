@@ -11,10 +11,14 @@ import com.demo.android.cassiana.rickandmortycardapp.R
 import com.demo.android.cassiana.rickandmortycardapp.api.Repository
 import com.demo.android.cassiana.rickandmortycardapp.extensions.getTextButtonChecked
 import com.demo.android.cassiana.rickandmortycardapp.extensions.getTextChipChecked
+import com.demo.android.cassiana.rickandmortycardapp.extensions.setButtonChecked
+
 import com.demo.android.cassiana.rickandmortycardapp.ui.fragment.SharedViewModel
 import com.demo.android.cassiana.rickandmortycardapp.ui.fragment.SharedViewModelFactory
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_filter.*
+import kotlinx.android.synthetic.main.fragment_list.*
 
 
 class FilterFragment : BottomSheetDialogFragment() {
@@ -31,8 +35,12 @@ class FilterFragment : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.filterValue.observe(viewLifecycleOwner, {
+            //chipgroup_status.setChipChecked(it[0])
+            radiogroup_gender.setButtonChecked(it[1])
+        })
+
         btn_make_filter.setOnClickListener {
-            Log.d("TypeFilter", chipgroup_status.getTextChipChecked())
             if(chipgroup_status.getTextChipChecked().isNotEmpty() && radiogroup_gender.getTextButtonChecked().isNotEmpty()) {
                 viewModel.getByStatusAndGender(chipgroup_status.getTextChipChecked(), radiogroup_gender.getTextButtonChecked(), 1)
             }else{
@@ -42,6 +50,17 @@ class FilterFragment : BottomSheetDialogFragment() {
                     viewModel.getByGender(radiogroup_gender.getTextButtonChecked(), 1)
                 }
             }
+
+            val filter = arrayOf(chipgroup_status.checkedChipId, radiogroup_gender.checkedRadioButtonId)
+            val num = filter[0]
+            val num2 = filter[1]
+            Log.d("Filter", num.toString() + " "+ num2.toString())
+            Log.d("FilterSize", filter.size.toString())
+
+            if(filter.isNotEmpty()) {
+                viewModel.filterValue.value = filter
+            }
+
             findNavController().popBackStack(R.id.listFragment, false)
         }
     }
