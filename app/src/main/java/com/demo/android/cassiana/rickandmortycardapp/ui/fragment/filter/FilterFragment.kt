@@ -1,7 +1,6 @@
 package com.demo.android.cassiana.rickandmortycardapp.ui.fragment.filter
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,13 +11,11 @@ import com.demo.android.cassiana.rickandmortycardapp.api.Repository
 import com.demo.android.cassiana.rickandmortycardapp.extensions.getTextButtonChecked
 import com.demo.android.cassiana.rickandmortycardapp.extensions.getTextChipChecked
 import com.demo.android.cassiana.rickandmortycardapp.extensions.setButtonChecked
-
+import com.demo.android.cassiana.rickandmortycardapp.extensions.setChipChecked
 import com.demo.android.cassiana.rickandmortycardapp.ui.fragment.SharedViewModel
 import com.demo.android.cassiana.rickandmortycardapp.ui.fragment.SharedViewModelFactory
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_filter.*
-import kotlinx.android.synthetic.main.fragment_list.*
 
 
 class FilterFragment : BottomSheetDialogFragment() {
@@ -36,7 +33,7 @@ class FilterFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.filterValue.observe(viewLifecycleOwner, {
-            //chipgroup_status.setChipChecked(it[0])
+            chipgroup_status.setChipChecked(it[0])
             radiogroup_gender.setButtonChecked(it[1])
         })
 
@@ -51,15 +48,7 @@ class FilterFragment : BottomSheetDialogFragment() {
                 }
             }
 
-            val filter = arrayOf(chipgroup_status.checkedChipId, radiogroup_gender.checkedRadioButtonId)
-            val num = filter[0]
-            val num2 = filter[1]
-            Log.d("Filter", num.toString() + " "+ num2.toString())
-            Log.d("FilterSize", filter.size.toString())
-
-            if(filter.isNotEmpty()) {
-                viewModel.filterValue.value = filter
-            }
+            viewModel.filterValue.value = arrayOf(chipgroup_status.checkedChipId, radiogroup_gender.checkedRadioButtonId)
 
             findNavController().popBackStack(R.id.listFragment, false)
         }

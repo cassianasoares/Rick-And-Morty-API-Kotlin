@@ -37,10 +37,6 @@ class CharacterAdpater: RecyclerView.Adapter<CharacterAdpater.CharacterViewHolde
         notifyDataSetChanged()
     }
 
-    fun getCharacters(): List<Character>{
-        return listCharacters
-    }
-
     class CharacterViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         var image_character = itemView.character_img
         var status_type = itemView.txt_status

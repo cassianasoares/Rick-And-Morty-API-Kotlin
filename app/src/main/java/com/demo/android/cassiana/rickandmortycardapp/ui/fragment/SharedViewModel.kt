@@ -11,15 +11,18 @@ class SharedViewModel(private val repository: Repository): ViewModel() {
 
     var listCharactersInEpisode = MutableLiveData<List<Character>>()
     var filterValue = MutableLiveData<Array<Int>>()
+    var isFilter = MutableLiveData<Boolean>()
 
     init {
-        filterValue.value = arrayOf(-1, -1)
+        filterValue.value = arrayOf(0, 0)
+        isFilter.value = false
     }
 
     fun getCharacters(page: Int) {
         viewModelScope.launch{
             val characters = repository.getCharacters(page)
             listCharactersInEpisode.value = characters.results
+            isFilter.value = false
         }
     }
 
@@ -27,6 +30,7 @@ class SharedViewModel(private val repository: Repository): ViewModel() {
         viewModelScope.launch{
             val characters = repository.getCharactersByName(name)
             listCharactersInEpisode.value = characters.results
+            isFilter.value = true
         }
     }
 
@@ -34,6 +38,7 @@ class SharedViewModel(private val repository: Repository): ViewModel() {
         viewModelScope.launch{
             val characters = repository.getCharactersbyStatusAndGender(status, gender, page)
             listCharactersInEpisode.value = characters.results
+            isFilter.value = true
         }
     }
 
@@ -41,6 +46,7 @@ class SharedViewModel(private val repository: Repository): ViewModel() {
         viewModelScope.launch{
             val characters = repository.getCharactersByStatus(status, page)
             listCharactersInEpisode.value = characters.results
+            isFilter.value = true
         }
     }
 
@@ -48,6 +54,7 @@ class SharedViewModel(private val repository: Repository): ViewModel() {
         viewModelScope.launch{
             val characters = repository.getCharactersByGender(gender, page)
             listCharactersInEpisode.value = characters.results
+            isFilter.value = true
         }
     }
 

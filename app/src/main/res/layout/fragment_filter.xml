@@ -50,6 +50,7 @@
                 android:textSize="14sp" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_dead"
                 style="@style/CostumChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,6 +58,7 @@
                 android:textSize="14sp" />
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_unknown"
                 style="@style/CostumChip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -114,7 +116,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_make_filter"
             android:layout_width="150dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="24dp"

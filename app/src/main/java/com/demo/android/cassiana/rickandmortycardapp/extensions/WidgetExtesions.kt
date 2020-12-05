@@ -7,26 +7,18 @@ import com.google.android.material.chip.ChipGroup
 
 fun ChipGroup.getTextChipChecked(): String{
     val selectedId: Int = this.checkedChipId
-    if(selectedId == -1){
-        return " "
-    }else{
-        return findViewById<Chip>(selectedId).text.toString()
-    }
+    return if(selectedId > -1) findViewById<Chip>(selectedId).text.toString() else " "
+}
+
+fun ChipGroup.setChipChecked(selectedId: Int){
+    if(selectedId > 0) this.findViewById<Chip>(selectedId).isChecked = true
 }
 
     fun RadioGroup.getTextButtonChecked(): String {
         val selectedId: Int = this.checkedRadioButtonId
-        if (selectedId == -1) {
-            return " "
-        } else {
-            return findViewById<RadioButton>(selectedId).text.toString()
-        }
+        return if(selectedId > -1) findViewById<RadioButton>(selectedId).text.toString() else " "
     }
 
     fun RadioGroup.setButtonChecked(selectedId: Int) {
-        if (selectedId == -1) {
-            return
-        } else {
-            this.findViewById<RadioButton>(selectedId).isChecked = true
-        }
+        if(selectedId > 0) findViewById<RadioButton>(selectedId).isChecked = true
     }
