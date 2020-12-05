@@ -8,39 +8,16 @@
     tools:context=".ui.fragment.details.DetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="32dp"
+        android:background="@drawable/ic_painel_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/painel_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_painel_location"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/painel_card" />
-
-
-        <ImageView
-            android:id="@+id/painel_card"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_painel_character"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59000003">
 
         <TextView
             android:id="@+id/txt_episodes"
@@ -49,26 +26,26 @@
             android:text="@string/title_episodes"
             android:textColor="@color/text_details_color"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/txt_origin"
-            app:layout_constraintEnd_toEndOf="@+id/painel_location"
-            app:layout_constraintHorizontal_bias="0.63"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.65"
             app:layout_constraintStart_toEndOf="@+id/txt_titulo_origin"
-            app:layout_constraintTop_toTopOf="@+id/painel_location"
-            app:layout_constraintVertical_bias="0.19" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_gender"
+            app:layout_constraintVertical_bias="0.23000002" />
 
         <TextView
             android:id="@+id/txt_n_episodes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="42"
             android:textColor="@color/text_details_color"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/txt_episodes"
-            app:layout_constraintEnd_toEndOf="@+id/painel_location"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toEndOf="@+id/txt_episodes"
-            app:layout_constraintTop_toTopOf="@+id/txt_episodes" />
+            app:layout_constraintTop_toTopOf="@+id/txt_episodes"
+            tools:text="42" />
 
         <TextView
             android:id="@+id/txt_gender"
@@ -76,38 +53,39 @@
             android:layout_height="wrap_content"
             android:textColor="@color/text_details_color"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/painel_card"
-            app:layout_constraintEnd_toEndOf="@+id/painel_card"
-            app:layout_constraintHorizontal_bias="0.08"
-            app:layout_constraintStart_toStartOf="@+id/painel_card"
-            app:layout_constraintTop_toBottomOf="@+id/img_character"
-            app:layout_constraintVertical_bias="0.84000003"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.66"
             tools:text="Genderless" />
 
         <TextView
             android:id="@+id/txt_titulo_origin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
             android:text="@string/title_origin"
             android:textColor="@color/text_details_color"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/painel_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
-            app:layout_constraintStart_toStartOf="@+id/painel_location"
-            app:layout_constraintTop_toTopOf="@+id/painel_location" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.81" />
 
         <TextView
             android:id="@+id/txt_origin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="24dp"
             android:maxLines="1"
             android:textColor="@color/text_details_color"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@+id/painel_location"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="@+id/txt_titulo_origin"
             app:layout_constraintTop_toBottomOf="@+id/txt_titulo_origin"
@@ -122,8 +100,6 @@
             android:textColor="@color/text_details_color"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/painel_location"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/txt_origin"
             app:layout_constraintTop_toBottomOf="@+id/txt_origin" />
 
@@ -132,11 +108,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="24dp"
             android:maxLines="1"
             android:textColor="@color/text_details_color"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@+id/painel_location"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="@+id/txt_titulo_location"
             app:layout_constraintTop_toBottomOf="@+id/txt_titulo_location"
@@ -146,59 +122,60 @@
             android:id="@+id/txt_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Unknown"
             android:textColor="@color/text_details_color"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/painel_card"
-            app:layout_constraintEnd_toEndOf="@+id/painel_card"
-            app:layout_constraintHorizontal_bias="0.113"
-            app:layout_constraintStart_toStartOf="@+id/painel_card"
-            app:layout_constraintTop_toTopOf="@+id/painel_card"
-            app:layout_constraintVertical_bias="0.100000024" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txt_id_character"
+            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.064"
+            tools:text="Unknown" />
 
         <TextView
             android:id="@+id/txt_id_character"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="7"
             android:textColor="@color/text_details_color"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/painel_card"
-            app:layout_constraintEnd_toEndOf="@+id/painel_card"
-            app:layout_constraintHorizontal_bias="0.9"
-            app:layout_constraintStart_toStartOf="@+id/painel_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.89"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.100000024" />
+            app:layout_constraintVertical_bias="0.064"
+            tools:text="7" />
 
         <ImageView
             android:id="@+id/img_character"
             android:layout_width="220dp"
             android:layout_height="220dp"
             android:src="@drawable/imgchar"
-            app:layout_constraintBottom_toBottomOf="@+id/painel_card"
-            app:layout_constraintEnd_toEndOf="@+id/painel_card"
-            app:layout_constraintStart_toStartOf="@+id/painel_card"
+            app:layout_constraintBottom_toTopOf="@+id/txt_gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_status"
-            app:layout_constraintVertical_bias="0.13999999" />
+            app:layout_constraintVertical_bias="0.3" />
 
         <TextView
             android:id="@+id/txt_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:maxLines="2"
             android:textAlignment="center"
             android:textColor="@color/text_details_color"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/painel_card"
-            app:layout_constraintEnd_toEndOf="@+id/painel_card"
-            app:layout_constraintStart_toStartOf="@+id/painel_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_character"
-            app:layout_constraintVertical_bias="0.19"
             tools:text="Abradolf Lincler" />
 
         <TextView
@@ -206,17 +183,17 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
             android:textAlignment="center"
+            android:textAllCaps="true"
             android:textColor="@color/text_details_color"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/painel_card"
-            app:layout_constraintEnd_toEndOf="@+id/painel_card"
-            app:layout_constraintStart_toStartOf="@+id/painel_card"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_name"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="Human" />
+            tools:text="HUMAN" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
