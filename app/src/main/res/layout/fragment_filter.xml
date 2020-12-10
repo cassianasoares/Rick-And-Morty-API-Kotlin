@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="@string/title_filter"
-        android:textColor="@android:color/white"
         android:textAlignment="center"
         android:textSize="18sp"
         />
@@ -29,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_status"
-            android:textColor="@android:color/white"
+            tools:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -73,7 +72,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/title_gender"
-            android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 

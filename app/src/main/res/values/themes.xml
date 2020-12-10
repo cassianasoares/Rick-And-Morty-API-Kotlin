@@ -5,14 +5,13 @@
         <item name="colorPrimary">@color/black_inicial</item>
         <item name="colorPrimaryVariant">@color/black_final</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:textColorHint">#BCBCBC</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="background">@color/black_inicial</item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/white</item>
         <item name="bottomSheetDialogTheme">@style/BottomSheetTheme</item>
     </style>
 
@@ -23,6 +22,7 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
 

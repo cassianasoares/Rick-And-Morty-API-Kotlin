@@ -17,7 +17,6 @@
             android:id="@+id/character_img"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/black_final"
             android:scaleType="centerCrop"
             tools:src="@drawable/imgchar"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -44,8 +43,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"
                 android:textStyle="bold"
                 tools:text="133" />
         </androidx.cardview.widget.CardView>
@@ -69,7 +66,6 @@
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="8dp"
                 tools:text="Abradolf Lincler"
-                android:textColor="@android:color/white"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:maxLines="2" />
@@ -83,7 +79,6 @@
                 android:layout_marginEnd="12dp"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
-                android:textColor="@android:color/white"
                 android:textSize="12sp"
                 />
 
