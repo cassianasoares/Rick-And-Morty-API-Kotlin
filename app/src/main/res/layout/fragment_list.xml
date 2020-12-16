@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black_ligth"
     tools:context=".ui.fragment.list.ListFragment">
 
     <androidx.appcompat.widget.SearchView
@@ -51,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="52dp"
         android:text="@string/title_reset"
-        android:textColor="@color/text_details_color"
+        android:textColor="@color/text_blue"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/recycclerview"
         app:layout_constraintEnd_toEndOf="parent"

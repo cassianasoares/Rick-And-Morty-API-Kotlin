@@ -26,7 +26,7 @@
     </style>
 
     <style name="TextColor">
-        <item name="android:textColor">@color/text_details_color</item>
+        <item name="android:textColor">@color/text_blue</item>
     </style>
 
 </resources>

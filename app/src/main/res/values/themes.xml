@@ -6,8 +6,6 @@
         <item name="colorPrimaryVariant">@color/black_final</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:textColorHint">@color/gray</item>
-        <item name="background">@color/black_ligth</item>
-
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

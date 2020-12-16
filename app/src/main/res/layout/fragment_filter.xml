@@ -90,16 +90,16 @@
                 android:text="@string/txt_checkbox_female" />
 
             <RadioButton
-                android:id="@+id/checkbox_genderless"
-                style="@style/CostumRadioButton"
-                android:background="@drawable/checkbox_genderless_selector"
-                android:text="@string/txt_checkbox_genderless" />
-
-            <RadioButton
                 android:id="@+id/checkbox_male"
                 style="@style/CostumRadioButton"
                 android:background="@drawable/checkbox_male_selector"
                 android:text="@string/txt_checkbox_male" />
+
+            <RadioButton
+                android:id="@+id/checkbox_genderless"
+                style="@style/CostumRadioButton"
+                android:background="@drawable/checkbox_genderless_selector"
+                android:text="@string/txt_checkbox_genderless" />
 
             <RadioButton
                 android:id="@+id/checkbox_unknown"
