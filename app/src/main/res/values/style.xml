@@ -6,7 +6,7 @@
         <item name="chipStrokeColor">@color/costum_chip_color</item>
         <item name="chipStrokeWidth">2dp</item>
         <item name="chipCornerRadius">8dp</item>
-        <item name="chipBackgroundColor">@color/black_inicial</item>
+        <item name="chipBackgroundColor">@color/black_ligth</item>
     </style>
 
     <style name="CostumRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">

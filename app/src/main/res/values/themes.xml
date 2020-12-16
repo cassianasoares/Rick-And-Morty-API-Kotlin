@@ -2,11 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme_RickAndMortyCardApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/black_inicial</item>
+        <item name="colorPrimary">@color/black_ligth</item>
         <item name="colorPrimaryVariant">@color/black_final</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:textColorHint">@color/gray</item>
-        <item name="background">@color/black_inicial</item>
+        <item name="background">@color/black_ligth</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>

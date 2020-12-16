@@ -1,6 +1,6 @@
 <resources>
     <!-- App Strings -->
-    <string name="app_name">RickAndMorty API</string>
+    <string name="app_name">Rick And Morty APP</string>
 
     <!-- ListFragment Strings -->
     <string name="title_characters">Characters</string>

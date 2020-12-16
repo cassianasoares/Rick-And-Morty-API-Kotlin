@@ -2,11 +2,11 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item>
-        <color android:color="@color/black_inicial"/>
+        <color android:color="@color/black_ligth"/>
     </item>
 
     <item>
-        <bitmap android:src="@drawable/logo_splash_screen"
+        <bitmap android:src="@drawable/logo_splash"
             android:gravity="center"/>
     </item>
 
